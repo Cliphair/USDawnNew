@@ -94,26 +94,26 @@
             "page": ""
           }
         },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "type": "custom",
-            "heading": "Ingredients",
-            "icon": "none",
-            "content": "{{ product.metafields.additional_information.ingredients | metafield_tag }}",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "type": "custom",
-            "heading": "How to Use",
-            "icon": "none",
-            "content": "{{ product.metafields.additional_information.how_to_use | metafield_tag }}",
-            "page": ""
-          }
-        },
+        // "collapsible-row-1": {
+        //   "type": "collapsible_tab",
+        //   "settings": {
+        //     "type": "custom",
+        //     "heading": "Ingredients",
+        //     "icon": "none",
+        //     "content": "{{ product.metafields.additional_information.ingredients | metafield_tag }}",
+        //     "page": ""
+        //   }
+        // },
+        // "collapsible-row-2": {
+        //   "type": "collapsible_tab",
+        //   "settings": {
+        //     "type": "custom",
+        //     "heading": "How to Use",
+        //     "icon": "none",
+        //     "content": "{{ product.metafields.additional_information.how_to_use | metafield_tag }}",
+        //     "page": ""
+        //   }
+        // },
         "collapsible_tab_Qap6UU": {
           "type": "collapsible_tab",
           "settings": {
