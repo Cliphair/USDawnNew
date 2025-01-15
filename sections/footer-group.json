@@ -1,0 +1,79 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brand_information_QUWgFB": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "footer-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "Cliphair",
+            "subtext": "<p>03450 211 311</p><p>customerservice@cliphair.com</p><p>9:30AM - 4:30PM - (Mon - Fri)</p><p></p><p>Unit 1 Watermill House, Restmor Way,</p><p>Wallington SM6 7AH</p><p>United Kingdom</p><p></p>"
+          }
+        },
+        "d08a5cf4-367a-4ccd-8b21-13be0c3a942b": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": ""
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Services",
+            "menu": "footernavigation1"
+          }
+        },
+        "footer-2": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Useful Links",
+            "menu": "useful-links"
+          }
+        }
+      },
+      "block_order": [
+        "brand_information_QUWgFB",
+        "footer-0",
+        "d08a5cf4-367a-4ccd-8b21-13be0c3a942b",
+        "footer-1",
+        "footer-2"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "newsletter_enable": true,
+        "newsletter_heading": "Grab an exclusive discount + join the Cliphair Community!",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

@@ -1,0 +1,261 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "b6c51df6-b6e1-4084-867c-38313ffac6d0": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15283893993533__b6c51df6-b6e1-4084-867c-38313ffac6d0-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>THE CLIPHAIR BLOG</strong>",
+            "heading_size": "h2",
+            "h1": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15283893993533__b6c51df6-b6e1-4084-867c-38313ffac6d0-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "article-trending": {
+      "type": "article-trending",
+      "blocks": {
+        "image_WhXAwQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image1.webp"
+          }
+        },
+        "image_LRefiD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image2.webp"
+          }
+        },
+        "image_mTUfwa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image3.webp"
+          }
+        },
+        "image_aCrzVp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image4.webp"
+          }
+        },
+        "image_rJjbLb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image5.webp"
+          }
+        },
+        "image_f8LEVG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image6.webp"
+          }
+        },
+        "image_bEmzXb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image7.webp"
+          }
+        },
+        "image_TVnmEx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image8.webp"
+          }
+        },
+        "image_Qqw4kL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image9.webp"
+          }
+        },
+        "image_YhyKHW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image10.webp"
+          }
+        },
+        "image_ewke6R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image11.webp"
+          }
+        },
+        "image_wG4Ti8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-section-bg-image12.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_WhXAwQ",
+        "image_LRefiD",
+        "image_mTUfwa",
+        "image_aCrzVp",
+        "image_rJjbLb",
+        "image_f8LEVG",
+        "image_bEmzXb",
+        "image_TVnmEx",
+        "image_Qqw4kL",
+        "image_YhyKHW",
+        "image_ewke6R",
+        "image_wG4Ti8"
+      ],
+      "custom_css": [
+        ".slider-buttons > .slider-button {background: white;}",
+        ".grid {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px;}"
+      ],
+      "settings": {
+        "heading": "Trending",
+        "trending-list": "trending-articles",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "color_scheme": "accent-2",
+        "show_image": true,
+        "image_ratio": "square",
+        "show_date": false,
+        "show_author": true,
+        "bg_opacity": 0.5,
+        "mobile-row": 3,
+        "mobile-column": 2,
+        "desktop-row": 3,
+        "desktop-column": 6,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "article-categories": {
+      "type": "article-categories",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "scroll_to_grid": true,
+        "columns_desktop": 6,
+        "swipe_on_desktop": true,
+        "color_scheme": "inverse",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "slider_visual": "dots",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "custom_css": [
+        ".card__heading {color: #833c91;}"
+      ],
+      "settings": {
+        "show_page_title": false,
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "adapt",
+        "show_date": true,
+        "show_author": true,
+        "color_scheme": "inverse",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff": {
+      "type": "image-list",
+      "blocks": {
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
+            "text_label": "<p>Ethically<br>Sourced</p>",
+            "link": ""
+          }
+        },
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Outstanding-Reviews-_White.svg",
+            "text_label": "<p>Outstanding<br>Reviews</p>",
+            "link": "shopify://pages/testimonials"
+          }
+        },
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cliphair-Rewards-_White.svg",
+            "text_label": "<p>Cliphair<br>Rewards</p>",
+            "link": "shopify://pages/rewards"
+          }
+        },
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Free-Delivery-_White.svg",
+            "text_label": "<p>Free Delivery<br>& Returns</p>",
+            "link": ""
+          }
+        },
+        "cbdbff03-f013-487f-8288-6c9a46426bc6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "<p>Buy Now<br>Pay Later</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1",
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2",
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3",
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4",
+        "cbdbff03-f013-487f-8288-6c9a46426bc6"
+      ],
+      "custom_css": [
+        "img {max-height: 70px;}",
+        "a {text-decoration: none;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 5,
+        "swipe_on_desktop": false,
+        "color_scheme": "background-collection-titles",
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
+        "slider_visual": "counter",
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "b6c51df6-b6e1-4084-867c-38313ffac6d0",
+    "article-trending",
+    "article-categories",
+    "main",
+    "7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff"
+  ]
+}

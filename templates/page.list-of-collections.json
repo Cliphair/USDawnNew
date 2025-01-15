@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "heading_size": "h1",
+        "show_content": true,
+        "text_alignment": "center",
+        "color_scheme": "accent-4",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collection_carrousel_by_url_wipWMw": {
+      "type": "collection-carrousel-by-url",
+      "settings": {
+        "image_ratio": "portrait",
+        "hide_card_arrow": true,
+        "columns_desktop": 4,
+        "swipe_on_desktop": false,
+        "color_scheme": "accent-4",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main_page_more_info_Q3wUMD": {
+      "type": "main-page-more-info",
+      "settings": {
+        "show_content": true,
+        "text_alignment": "center",
+        "color_scheme": "accent-2",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "page_faq_KbgfYy": {
+      "type": "page-faq",
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "inverse",
+        "container_color_scheme": "accent-4",
+        "open_first_collapsible_row": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collection_carrousel_by_url_wipWMw",
+    "main_page_more_info_Q3wUMD",
+    "page_faq_KbgfYy"
+  ]
+}

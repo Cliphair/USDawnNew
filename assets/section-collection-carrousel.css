@@ -1,0 +1,168 @@
+.section-collection-carrousel .collection-carrousel-wrapper:not(:first-child) {
+	margin-top: 6rem;
+}
+
+.section-collection-carrousel .title-wrapper {
+	margin-bottom: 1.5rem;
+}
+
+.collection-carrousel-title {
+	margin: 0;
+}
+
+.section-collection-carrousel .intro-wrapper p {
+	margin: 0;
+}
+
+
+.section-collection-carrousel .block-container {
+	position: relative;
+	margin-top: 4rem;
+}
+
+.collection-carrousel {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.section-collection-carrousel .card .card__inner .card__media {
+	border: none;
+}
+
+.card__content {
+	display: grid;
+	grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);
+	padding: 2rem 1rem 1rem;
+	width: 100%;
+	flex-grow: 1;
+}
+
+.section-collection-carrousel .card__content {
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+.section-collection-carrousel .card__information {
+	padding: 0;
+}
+
+.section-collection-carrousel .button-wrapper {
+	margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 749px) {
+	.section-collection-carrousel .title-wrapper {
+		margin-bottom: 1rem;
+	}
+
+	.collection-carrousel:not(.slider) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.section-collection-carrousel .collection-carrousel:not(.slider) {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+.collection-carrousel__item:only-child {
+	max-width: 100%;
+	width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+	.collection-carrousel__item a:hover {
+		box-shadow: none;
+	}
+}
+
+@media screen and (min-width:750px) and (max-width:989px) {
+	.section-collection-carrousel .page-width {
+		padding: 0 1.5rem;
+	}
+}
+
+/* slider buttons */
+.section-collection-carrousel .slider-buttons>.slider-button {
+	background: var(--gradient-background);
+	border-radius: 50%;
+	position: absolute;
+	top: calc(50% - 22px);
+	right: 1.5rem;
+	border: 1px solid rgba(var(--color-foreground), .1)
+}
+
+.section-collection-carrousel .slider-buttons>.slider-button--prev {
+	left: 1.5rem;
+}
+
+.section-collection-carrousel .slider-buttons>.slider-button--next {
+	right: 1.5rem;
+}
+
+.section-collection-carrousel .slider-buttons>.slider-button .icon {
+	height: 1.2rem;
+}
+
+/* toggle bar and buttons */
+.toggleContainer {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: fit-content;
+	border: 3px solid rgba(var(--color-button), var(--alpha-button-background));
+	border-radius: 20px;
+	background: rgba(var(--color-button), var(--alpha-button-background));
+	font-weight: bold;
+	color: rgba(var(--color-button), var(--alpha-button-background));
+	cursor: pointer;
+	margin: 2rem 0 2rem auto;
+}
+
+.toggleContainer::before {
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	left: 0%;
+	border-radius: 20px;
+	background: white;
+	transition: all 0.3s;
+}
+
+.toggleContainer~.block-container {
+	margin-top: 0;
+}
+
+.toggleContainer.left::before {
+	left: 50%;
+}
+
+.toggleContainer p {
+	padding: 6px;
+	text-align: center;
+	z-index: 1;
+	margin: 0;
+}
+
+.toggleContainer.left p:first-child {
+	color: white;
+	transition: color 0.3s;
+}
+
+.toggleContainer.left p:last-child {
+	color: rgba(var(--color-button), var(--alpha-button-background));
+	transition: color 0.3s;
+}
+
+.toggleContainer p:first-child {
+	color: rgba(var(--color-button), var(--alpha-button-background));
+	transition: color 0.3s;
+}
+
+.toggleContainer p:last-child {
+	color: white;
+	transition: color 0.3s;
+}

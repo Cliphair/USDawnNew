@@ -1,0 +1,151 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (max-width: 749px) {
+    .collection-hero--with-image .collection-hero__inner {
+      padding-bottom: calc({{settings.media_shadow_vertical_offset | at_least: 0}}px + 2rem);
+    }
+  }
+{%- endstyle -%}
+
+{% liquid
+  assign description = collection.description
+  if description contains '<!-- split -->'
+    assign description = description | split: '<!-- split -->' | first
+  endif
+
+  if description contains '<!-- FAQ section -->'
+    assign description = description | split: '<!-- FAQ section -->' | first
+  endif
+%}
+
+<div class="collection-hero color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %}">
+  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="collection-hero__text-wrapper">
+      <h1 class="collection-hero__title {{ section.settings.heading_size }}">
+        {% comment %}<span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>{% endcomment %}
+        {{- collection.title | escape -}}
+        {% if current_tags %}
+          <span class="visually-hidden">| Tagged: {{ current_tags | join: ', ' }}</span>
+        {% endif %}
+      </h1>
+
+      {%- if section.settings.show_collection_description -%}
+        <div class="collection-hero__description rte {{ section.settings.text_alignment }}">
+          {{ description }}
+          {% comment %}
+            <span class="short-description">
+              {{ collection.description | strip_html | truncate: 300 }}
+            </span>
+            <span class="full-description" style="display: none;">
+              {{ collection.description }}
+            </span>
+            <a href="javascript:void(0);" class="toggle-description">Read More</a>
+          {% endcomment %}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.show_collection_image and collection.image -%}
+      <div class="collection-hero__image-container media gradient">
+        <img
+          srcset="
+            {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+            {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+            {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+            {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ collection.image | image_url }} {{ collection.image.width }}w
+          "
+          src="{{ collection.image | image_url: width: 750 }}"
+          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+          alt=""
+          width="{{ collection.image.width }}"
+          height="{{ collection.image.height }}"
+        >
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% comment %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggleDescription = document.querySelector('.toggle-description');
+      var shortDescription = document.querySelector('.short-description');
+      var fullDescription = document.querySelector('.full-description');
+
+      toggleDescription.addEventListener('click', function () {
+        if (fullDescription.style.display === 'none') {
+          fullDescription.style.display = 'block';
+          shortDescription.style.display = 'none';
+          toggleDescription.textContent = 'Read Less';
+        } else {
+          fullDescription.style.display = 'none';
+          shortDescription.style.display = 'block';
+          toggleDescription.textContent = 'Read More';
+        }
+      });
+    });
+  </script>
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": true,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "Description alignment",
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ]
+}
+{% endschema %}

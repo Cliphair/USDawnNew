@@ -1,0 +1,284 @@
+{{ 'section-marquee.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .section-marquee{
+    --marquee-mobile-gap:{% unless section.settings.scroll_mobile %}var(--grid-mobile-horizontal-spacing){% else %}calc(var(--grid-mobile-horizontal-spacing)*2){% endunless %};
+    --marquee-desktop-gap:{% unless section.settings.scroll_desktop %}var(--grid-desktop-horizontal-spacing){% else %}calc(var(--grid-desktop-horizontal-spacing)*2){% endunless %};
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<style>
+  @media screen and (max-width:990px){
+    #Marquee-{{ section.id }} .marquee.scroll-mobile .marquee__content {
+      animation: scroll-mobile {{ section.settings.duration_mobile }}s linear infinite;
+    }
+  }
+
+  @media screen and (min-width:990px){
+    #Marquee-{{ section.id }} .marquee.scroll-desktop .marquee__content {
+      animation: scroll-desktop {{ section.settings.duration_desktop }}s linear infinite;
+    }
+  }
+
+  @media screen and (min-width:{{ settings.page_width }}px){
+    .page-width-desktop .marquee_content-1-items-desktop .marquee__item{
+      width: calc({{ settings.page_width }}px - 10rem);
+    }
+
+    .page-width-desktop .marquee_content-2-items-desktop .marquee__item{
+      width: calc(({{ settings.page_width }}px - 10rem - var(--marquee-desktop-gap)) / 2);
+    }
+
+    .page-width-desktop .marquee_content-3-items-desktop .marquee__item{
+      width: calc(({{ settings.page_width }}px - 10rem - (var(--marquee-desktop-gap) * 2)) / 3);
+    }
+
+    .page-width-desktop .marquee_content-4-items-desktop .marquee__item{
+      width: calc(({{ settings.page_width }}px - 10rem - (var(--marquee-desktop-gap) * 3)) / 4);
+    }
+
+    .page-width-desktop .marquee_content-5-items-desktop .marquee__item{
+      width: calc(({{ settings.page_width }}px - 10rem - (var(--marquee-desktop-gap) * 4)) / 5);
+    }
+
+    .page-width-desktop .marquee_content-6-items-desktop .marquee__item{
+      width: calc(({{ settings.page_width }}px - 10rem - (var(--marquee-desktop-gap) * 5)) / 6);
+    }
+  }
+</style>
+
+<div
+  class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+  id="Marquee-{{ section.id }}"
+>
+  <div class="{% unless section.settings.scroll_mobile %} page-width-mobile{% endunless %}{% unless section.settings.scroll_desktop %} page-width-desktop{% endunless %}">
+    <div class="marquee {% if section.settings.scroll_mobile %} scroll-mobile{% endif %}{% if section.settings.scroll_desktop %} scroll-desktop{% endif %}">
+      <ul class="marquee__content marquee_content-{{ section.settings.columns_desktop }}-items-desktop marquee_content-{{ section.settings.columns_mobile }}-items-tablet-down">
+        {% for block in section.blocks %}
+          <li class="marquee__item">
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}">
+            {%- endif -%}
+            {%- if block.settings.image != blank and block.settings.image.src != blank -%}
+              <img
+                srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}"
+                src="{{ block.settings.image | image_url: width: 190 }}"
+                alt="{{ block.settings.image.alt | escape }}"
+                loading="eager"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+              >
+            {%- endif -%}
+            {% if block.settings.text_label != null %}
+              <p class="{{ section.settings.text_size }}">{{ block.settings.text_label }}</p>
+            {%- endif -%}
+            {%- if block.settings.link != blank -%}
+              </a>
+            {%- endif -%}
+          </li>
+        {% endfor %}
+      </ul>
+
+      {% if section.settings.scroll_mobile or section.settings.scroll_desktop %}
+        <ul
+          aria-hidden="true"
+          class="marquee__content marquee_content-{{ section.settings.columns_desktop }}-items-desktop marquee_content-{{ section.settings.columns_mobile }}-items-tablet-down"
+        >
+          {% for block in section.blocks %}
+            <li class="marquee__item">
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}">
+              {%- endif -%}
+              {%- if block.settings.image != blank and block.settings.image.src != blank -%}
+                <img
+                  srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}"
+                  src="{{ block.settings.image | image_url: width: 190 }}"
+                  alt="{{ block.settings.image.alt | escape }}"
+                  loading="eager"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                >
+              {%- endif -%}
+              {% if block.settings.text_label != null %}
+                <p class="{{ section.settings.text_size }}">{{ block.settings.text_label }}</p>
+              {%- endif -%}
+              {%- if block.settings.link != blank -%}
+                </a>
+              {%- endif -%}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Marquee",
+  "tag": "section",
+  "class": "section section-marquee",
+  "max_blocks": 10,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "text_size",
+      "options": [
+        {
+          "value": "p",
+          "label": "Small"
+        },
+        {
+          "value": "h3",
+          "label": "Medium"
+        },
+        {
+          "value": "h2",
+          "label": "Large"
+        }
+      ],
+      "default": "p",
+      "label": "Text size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        }
+      ],
+      "default": "1",
+      "label": "Number of columns on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "scroll_mobile",
+      "default": false,
+      "label": "Infinite scroll on mobile"
+    },
+    {
+      "type": "range",
+      "id": "duration_mobile",
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "unit": "sec",
+      "label": "Duration mobile",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Desktop Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "scroll_desktop",
+      "default": false,
+      "label": "Infinite scroll on desktop"
+    },
+    {
+      "type": "range",
+      "id": "duration_desktop",
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "unit": "sec",
+      "label": "Duration desktop",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "element",
+      "name": "Element",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_label",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "Optional"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee"
+    }
+  ]
+}
+{% endschema %}

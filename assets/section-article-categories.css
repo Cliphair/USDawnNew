@@ -1,0 +1,85 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* overrides */
+/* @media screen and (max-width: 749px) {
+  .section-article-categories .grid--peek.slider .grid__item:first-of-type {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .section-article-categories .slider--tablet.grid--peek .grid__item:first-of-type {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .section-article-categories .slider--desktop:after {
+    content: none;
+  }
+
+  .section-article-categories .slider--desktop .slider__slide:first-child {
+    margin-left: 0;
+    scroll-margin-left: 0;
+  }
+
+  .section-article-categories .grid--1-col-desktop .grid__item {
+    width: 100%;
+  }
+
+  .section-article-categories .grid--2-col-desktop .grid__item {
+    width: calc((100% - var(--grid-desktop-horizontal-spacing)) / 2);
+  }
+
+  .section-article-categories .grid--3-col-desktop .grid__item {
+    width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 2)) / 3);
+  }
+
+  .section-article-categories .grid--4-col-desktop .grid__item {
+    width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 3)) / 4);
+  }
+
+  .section-article-categories .grid--5-col-desktop .grid__item {
+    width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 4)) / 5);
+  }
+
+  .section-article-categories .grid--6-col-desktop .grid__item {
+    width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 5)) / 6);
+  }
+} */
+
+
+/* slider arrows */
+/* .section-article-categories .slider-buttons {
+  position: absolute;
+  top: calc(50% - 22px);
+  width: 100%;
+}
+
+.section-article-categories .slider-buttons .slider-button {
+  position: absolute;
+}
+
+.section-article-categories .slider-buttons .slider-button--prev {
+  left: -1.5rem;
+}
+
+.section-article-categories .slider-buttons .slider-button--next {
+  right: -1.5rem;
+}
+
+.section-article-categories .slider-buttons .slider-button .icon {
+  height: 44px;
+}
+
+@media screen and (min-width:750px) {
+  .section-article-categories .slider-buttons .slider-button--prev {
+    left: -5rem;
+  }
+
+  .section-article-categories .slider-buttons .slider-button--next {
+    right: -5rem;
+  }
+} */

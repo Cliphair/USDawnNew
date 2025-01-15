@@ -1,0 +1,124 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "We now ship 7 days a week! Next Day Delivery available every day",
+            "link": ""
+          }
+        },
+        "announcement-bar-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Delivery on orders over £30. Worldwide Shipping",
+            "link": "shopify://pages/hair-extensions-shipping-delivery"
+          }
+        },
+        "announcement_nNPD4X": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "We've Revamped Our Website For A Better, Faster Shopping Experience - Explore Now!",
+            "link": "shopify://blogs/hair-blog/our-new-website-everything-you-need-to-know"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement-bar-1",
+        "announcement_nNPD4X"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": false,
+        "show_scroll_arrow": false,
+        "show_social": false,
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "countdown_DwXXJA": {
+      "type": "countdown",
+      "disabled": true,
+      "settings": {
+        "text": "Free Sunday Delivery Order In",
+        "color_scheme": "accent-2",
+        "year": 2024,
+        "month": "10",
+        "day": 5,
+        "hour": 11,
+        "minute": 29,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "top-center",
+        "menu": "main-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "reduce-logo-size",
+        "show_line_separator": false,
+        "show_icon_arrow": false,
+        "color_scheme": "background-1",
+        "menu_color_scheme": "background-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    },
+    "image_ticker_fpd48x": {
+      "type": "image-ticker",
+      "blocks": {
+        "announcement_image_zkJVKU": {
+          "type": "announcement-image",
+          "settings": {
+            "image": "shopify://shop_images/Hair_Extensions_Monday_Delivery.gif",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": "shopify://pages/hair-extensions-by-colour"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_image_zkJVKU"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "img {height: auto;}"
+      ],
+      "settings": {}
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "countdown_DwXXJA",
+    "header",
+    "image_ticker_fpd48x",
+    "breadcrumbs"
+  ]
+}

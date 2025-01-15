@@ -1,0 +1,299 @@
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
+  <div>
+    <div class="cart__footer section-{{ section.id }}-padding">
+      <div class="cart__additional-info">
+        {%- if settings.show_cart_note -%}
+          <cart-note class="cart__note field">
+            <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+            <textarea
+              class="text-area field__input"
+              name="note"
+              form="cart"
+              id="Cart-note"
+              placeholder="{{ 'sections.cart.note' | t }}"
+            >{{ cart.note }}</textarea>
+          </cart-note>
+        {%- endif -%}
+
+        <div class="cart__faqs">
+          <h2 class="h3 cart__faqs-title">FAQs</h2>
+
+          <div
+            class="accordion"
+          >
+            <details
+              id="Details-{{ section.id }}-1"
+            >
+              <summary id="Summary-{{ section.id }}-1">
+                <h3 class="accordion__title inline-richtext h4">Can I return or exchange the hair?</h3>
+                {% render 'icon-caret' %}
+              </summary>
+              <div
+                class="accordion__content rte"
+                id="CollapsibleAccordion-{{ section.id }}-1"
+                role="region"
+                aria-labelledby="Summary-{{ section.id }}-1"
+              >
+                <p>
+                  If you are dissatisfied with your extensions, you can return them for a refund or exchange within 60
+                  days with our free return label.
+                  <b
+                    >*Due to hygiene reasons, we cannot accept the return of extensions that have been worn or tampered
+                    with.</b
+                  >
+                  <a href="/pages/returns-information" title="Returns Information">Full Returns Policy</a>
+                </p>
+              </div>
+            </details>
+          </div>
+          <div
+            class="accordion"
+          >
+            <details
+              id="Details-{{ section.id }}-2"
+            >
+              <summary id="Summary-{{ section.id }}-2">
+                <h3 class="accordion__title inline-richtext h4">What If I picked the wrong Colour?</h3>
+                {% render 'icon-caret' %}
+              </summary>
+              <div
+                class="accordion__content rte"
+                id="CollapsibleAccordion-{{ section.id }}-2"
+                role="region"
+                aria-labelledby="Summary-{{ section.id }}-2"
+              >
+                <p>
+                  All colour exchanges are free of cost. You can use our
+                  <a href="/pages/colour-matching-service" title="Free Colour Matching Service"
+                    >Free Colour Matching Service</a
+                  >
+                  for help and advice. Now with Whatsapp!
+                </p>
+              </div>
+            </details>
+          </div>
+          <div
+            class="accordion"
+          >
+            <details
+              id="Details-{{ section.id }}-3"
+            >
+              <summary id="Summary-{{ section.id }}-3">
+                <h3 class="accordion__title inline-richtext h4">
+                  Can I exchange the extensions for a different type/length?
+                </h3>
+                {% render 'icon-caret' %}
+              </summary>
+              <div
+                class="accordion__content rte"
+                id="CollapsibleAccordion-{{ section.id }}-3"
+                role="region"
+                aria-labelledby="Summary-{{ section.id }}-3"
+              >
+                <p>
+                  Yes, absolutely! So long as the product has not been worn or tampered. There may be a difference in
+                  price which may be a refund or additional cost.
+                  <a href="/pages/faqs" title="Cliphair Product & Customer FAQs">Read more FAQs here</a>
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+      <div class="cart__blocks">
+        {% for block in section.blocks %}
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              {% render block %}
+            {%- when 'subtotal' -%}
+              <div class="js-contents" {{ block.shopify_attributes }}>
+                <div>
+                  {%- if cart.cart_level_discount_applications.size > 0 -%}
+                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      {%- for discount in cart.cart_level_discount_applications -%}
+                        <li class="discounts__discount discounts__discount--position">
+                          {%- render 'icon-discount' -%}
+                          {{ discount.title }}
+                          (-{{ discount.total_allocated_amount | money }})
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                </div>
+
+                <div class="totals">
+                  <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
+                  <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
+                </div>
+
+                {% comment %}
+                  <small class="tax-note caption-large rte">
+                    {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                      {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                    {%- elsif cart.taxes_included -%}
+                      {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+                    {%- elsif shop.shipping_policy.body != blank -%}
+                      {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                    {%- else -%}
+                      {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+                    {%- endif -%}
+                  </small>
+                {% endcomment %}
+              </div>
+            {%- else -%}
+              <div class="cart__ctas" {{ block.shopify_attributes }}>
+                <noscript>
+                  <button type="submit" class="cart__update-button button button--secondary" form="cart">
+                    {{ 'sections.cart.update' | t }}
+                  </button>
+                </noscript>
+                <button
+                  type="submit"
+                  id="checkout"
+                  class="cart__checkout-button button"
+                  name="checkout"
+                  {% if cart == empty %}
+                    disabled
+                  {% endif %}
+                  form="cart"
+                  onclick="beginCheckoutEvent()"
+                >
+                  {{ 'sections.cart.checkout' | t }}
+                </button>
+              </div>
+
+              {%- if additional_checkout_buttons -%}
+                <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+                  <p class="h5 center">EXPRESS PAYMENT OPTIONS</p>
+                  {{ content_for_additional_checkout_buttons }}
+                </div>
+              {%- endif -%}
+          {%- endcase -%}
+        {% endfor %}
+
+        <div id="cart-errors"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function isIE() {
+      const ua = window.navigator.userAgent;
+      const msie = ua.indexOf('MSIE ');
+      const trident = ua.indexOf('Trident/');
+
+      return msie > 0 || trident > 0;
+    }
+
+    if (!isIE()) return;
+    const cartSubmitInput = document.createElement('input');
+    cartSubmitInput.setAttribute('name', 'checkout');
+    cartSubmitInput.setAttribute('type', 'hidden');
+    document.querySelector('#cart').appendChild(cartSubmitInput);
+    document.querySelector('#checkout').addEventListener('click', function (event) {
+      document.querySelector('#cart').submit();
+    });
+  });
+
+  var GA4_BEGIN_CHECKOUT = false;
+  function beginCheckoutEvent(){
+    // prevent it for trigger twice
+    if(!GA4_BEGIN_CHECKOUT){
+      GA4_BEGIN_CHECKOUT = true;
+      console.log("Google Analytics begin_checkout event");
+
+      dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+      dataLayer.push({
+        event: "begin_checkout",
+        ecommerce: {
+          currency: "{{ cart.currency.iso_code }}",
+          value: {{ cart.total_price | times: 0.01 }},
+          items: [
+          {% if cart.items.size > 0 %}
+            {% for item in cart.items %}
+              {
+                item_id: `{{ item.sku | remove: "(D)" | remove: "(D1)" }}`,
+                item_name: `{{ item.product.title | strip }}`,
+                item_brand: `{{ item.vendor | strip }}`,
+                item_category: `{{ item.product.type | strip }}`,
+                item_category2: `{{ item.product.metafields.custom.colour_group | strip }}`,
+                item_category3: `{{ item.product.metafields.custom.colour_name | strip }}`,
+                item_variant: `{{ item.variant.title | strip }}`,
+                price: {{ item.final_price | times: 0.01 }},
+                quantity: {{ item.quantity }},
+              },
+            {% endfor %}
+          {% endif %}
+          ]
+        }
+      });
+    }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-cart-footer.name",
+  "class": "cart__footer-wrapper",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subtotal",
+      "name": "t:sections.main-cart-footer.blocks.subtotal.name",
+      "limit": 1
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.main-cart-footer.blocks.buttons.name",
+      "limit": 1
+    },
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,238 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "heading_size": "h2",
+        "show_content": true,
+        "text_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "quiz_question_jkayw4": {
+      "type": "quiz-question",
+      "blocks": {
+        "answer_NtqBp8": {
+          "type": "answer",
+          "settings": {
+            "id": "thin",
+            "answer": "Thin\/Fine"
+          }
+        },
+        "answer_EmNq4A": {
+          "type": "answer",
+          "settings": {
+            "id": "medium",
+            "answer": "Medium\/Average Thickness"
+          }
+        },
+        "answer_QrN6fM": {
+          "type": "answer",
+          "settings": {
+            "id": "thick",
+            "answer": "Thick to Very Thick"
+          }
+        }
+      },
+      "block_order": [
+        "answer_NtqBp8",
+        "answer_EmNq4A",
+        "answer_QrN6fM"
+      ],
+      "settings": {
+        "id": "journey",
+        "page": "journey",
+        "question": "What is your hair type?",
+        "heading_size": "h1",
+        "text_allignment": "center",
+        "image_ratio": "square",
+        "color_scheme": "accent-2",
+        "button_style_secondary": false,
+        "show_information": true,
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "quiz_question_6XeMep": {
+      "type": "quiz-question",
+      "blocks": {
+        "answer_9rK4RM": {
+          "type": "answer",
+          "settings": {
+            "id": "short",
+            "answer": "Short (above shoulders)",
+            "answer_image": "shopify:\/\/shop_images\/short_journey.jpg"
+          }
+        },
+        "answer_hCExC3": {
+          "type": "answer",
+          "settings": {
+            "id": "mid",
+            "answer": "Mid-Length (top of bra)",
+            "answer_image": "shopify:\/\/shop_images\/Avarage.jpg"
+          }
+        },
+        "answer_99rqHW": {
+          "type": "answer",
+          "settings": {
+            "id": "long",
+            "answer": "Long (middle to lower back)",
+            "answer_image": "shopify:\/\/shop_images\/Thick.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "answer_9rK4RM",
+        "answer_hCExC3",
+        "answer_99rqHW"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "id": "journey",
+        "page": "journey",
+        "question": "What is your hair length?",
+        "heading_size": "h1",
+        "text_allignment": "center",
+        "image_ratio": "portrait",
+        "color_scheme": "accent-2",
+        "button_style_secondary": false,
+        "show_information": true,
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "quiz_question_4agX9E": {
+      "type": "quiz-question",
+      "blocks": {
+        "answer_jwdXWJ": {
+          "type": "answer",
+          "settings": {
+            "id": "longer",
+            "answer": "Add Length"
+          }
+        },
+        "answer_BgKN9A": {
+          "type": "answer",
+          "settings": {
+            "id": "thicker",
+            "answer": "Add Volume"
+          }
+        },
+        "answer_pKrFXz": {
+          "type": "answer",
+          "settings": {
+            "id": "l&t",
+            "answer": "Add Length & Volume"
+          }
+        }
+      },
+      "block_order": [
+        "answer_jwdXWJ",
+        "answer_BgKN9A",
+        "answer_pKrFXz"
+      ],
+      "settings": {
+        "id": "journey",
+        "page": "journey",
+        "question": "What are your hair extension goals?",
+        "heading_size": "h1",
+        "text_allignment": "center",
+        "image_ratio": "square",
+        "color_scheme": "accent-2",
+        "button_style_secondary": false,
+        "show_information": true,
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "quiz_question_nHUaJd": {
+      "type": "quiz-question",
+      "blocks": {
+        "answer_Nacie8": {
+          "type": "answer",
+          "settings": {
+            "id": "clipin",
+            "answer": "Clip-Ins (DIY product)",
+            "answer_image": "shopify:\/\/shop_images\/Clip_In_af2b4728-f605-44a7-83a7-543c895d4e9d.jpg"
+          }
+        },
+        "answer_aCkDFB": {
+          "type": "answer",
+          "settings": {
+            "id": "permanent",
+            "answer": "Permanent (professional application)",
+            "answer_image": "shopify:\/\/shop_images\/permanent_extensions_1df2bd0b-6854-40f9-8184-26400c592c9e.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "answer_Nacie8",
+        "answer_aCkDFB"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.slider {justify-content: center; }}"
+      ],
+      "settings": {
+        "id": "journey",
+        "page": "journey",
+        "question": "Do you want Clip-ins or Permanent extensions?",
+        "heading_size": "h1",
+        "text_allignment": "center",
+        "image_ratio": "square",
+        "color_scheme": "accent-2",
+        "button_style_secondary": false,
+        "show_information": true,
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "quiz_answer_YPArwe": {
+      "type": "quiz-answer",
+      "settings": {
+        "visible": false,
+        "id": "journey",
+        "title": "Your perfect match is...",
+        "message": "If you need help choosing the correct shade, let us help you with our <a href=\"https:\/\/www.cliphair.co.uk\/pages\/colour-matching-service\" title=\"colour match\">free colour match<\/a> service.",
+        "accordion_header": "You could also use:",
+        "heading_size": "h1",
+        "text_allignment": "center",
+        "image_ratio": "portrait",
+        "color_scheme": "accent-2",
+        "button_style_secondary": false,
+        "show_information": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "quiz_question_jkayw4",
+    "quiz_question_6XeMep",
+    "quiz_question_4agX9E",
+    "quiz_question_nHUaJd",
+    "quiz_answer_YPArwe"
+  ]
+}
