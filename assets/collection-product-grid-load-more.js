@@ -37,9 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
         if (loadedNextPageUrl) {
           loadMoreButton.disabled = false;
         }
-        yotpoWidgetsContainer.initWidgets();
+        reloadTrustpilotWidgets();
         loadingContainer.classList.remove("loading");
       })
 
   })
 })
+
+function reloadTrustpilotWidgets() {
+  // Check if Trustpilot script has loaded
+  if (window.Trustpilot) {
+    // Get all Trustpilot widgets on the page
+    const widgets = document.querySelectorAll('.trustpilot-widget');
+
+    // Reload Trustpilot widgets
+    widgets.forEach((widget) => {
+      Trustpilot.loadFromElement(widget);
+    });
+  } else {
+    console.warn("Trustpilot script is not loaded yet.");
+  }
+}
