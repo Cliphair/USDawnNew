@@ -41,7 +41,18 @@
       }
     }
   ],
-  "blog": [],
+  "blog": [
+    {
+      "key": "main_categories",
+      "namespace": "custom",
+      "name": "Main categories",
+      "description": "Main categories to be used as a filter",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
   "brand": [],
   "collection": [
     {

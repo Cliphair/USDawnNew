@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/logo_c33b4969-1d80-4ced-b3a4-314c05752e92.png",
+    "logo": "shopify://shop_images/Logo_Primary.png",
     "logo_width": 90,
     "favicon": "shopify://shop_images/favicon.png",
     "type_header_font": "inter_n5",
@@ -107,8 +107,8 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-69d57c77-dfa8-46c0-ae7f-75b47c0b9174",
     "sold_out_badge_color_scheme": "inverse",
-    "brand_description": "<p>03450 211 311</p><p><a href=\"mailto:customerservice@cliphair.co.uk\" title=\"Contact Us\">customerservice@cliphair.co.uk</a></p><p>9:30AM - 4:30PM - (Mon - Fri)</p><p></p><p>Unit 1 Watermill House, Restmor Way,</p><p>Wallington SM6 7AH</p><p>United Kingdom</p><p></p>",
-    "brand_image": "shopify://shop_images/logo_c33b4969-1d80-4ced-b3a4-314c05752e92.png",
+    "brand_description": "<p>1-855-207-0165</p><p><a href=\"mailto:support@cliphair.com\" title=\"Contact Us\">support@cliphair.com</a></p><p>9:30am-4:30pm (GMT)</p><p></p><p>Unit 1 Watermill House, Restmor Way,</p><p>Wallington SM6 7AH</p><p>United Kingdom</p><p></p>",
+    "brand_image": "shopify://shop_images/Logo_Primary.png",
     "brand_image_width": 120,
     "social_facebook_link": "https://www.facebook.com/Cliphair.Limited",
     "social_instagram_link": "https://www.instagram.com/cliphairlimited/",
@@ -141,15 +141,12 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "74204263759510710": {
         "type": "shopify://apps/dcart-discount-in-cart/blocks/app-embed/731e2611-8bdf-4514-b5e4-f64f1cae3fb7",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "8962992520437913685": {
         "type": "shopify://apps/yotpo-loyalty-rewards/blocks/loader-app-embed-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
@@ -162,32 +159,27 @@
       "11724500921838622758": {
         "type": "shopify://apps/frequently-bought/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "1877152918344802950": {
         "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
         "disabled": true,
-        "settings": {
-        }
+        "settings": {}
       },
       "pagefly-page-builder": {
         "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "4215564508307704909": {
         "type": "shopify://apps/sitemap-noindex-pro-seo/blocks/app-embed/4d815e2c-5af0-46ba-8301-d0f9cf660031",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     },
     "color_schemes": {

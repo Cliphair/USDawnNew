@@ -1,0 +1,465 @@
+<li>
+  {% assign object = collections['permanent-extensions'] %}
+  <a
+    id="HeaderDrawer-professional-all"
+    href="{{ object.url }}"
+    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+    {% if request.path == object.url %}
+      aria-current="page"
+    {% endif %}
+  >
+    All Professional Extensions
+  </a>
+</li>
+<li>
+  <details id="Details-menu-drawer-professional-nano-ring">
+    <summary
+      id="HeaderDrawer-professional-nano-ring"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      Nano Ring Hair Extensions
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-nano-ring"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        BACK
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['nano-rings-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-professional-nano-ring-nano-ring"
+            href="{{ object.url | append: '?filter.p.product_type=Nano+Ring+Hair+Extensions' }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Remy Royale Nano Rings (50g)
+          </a>
+        </li>
+
+        <li>
+          <a
+            id="HeaderDrawer-professional-nano-ring-nano-bond"
+            href="{{ object.url | append: '?filter.p.product_type=Remy+Royale+Nano+Bonds' }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Remy Royale Nano Bonds (50g)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-professional-tape">
+    <summary
+      id="HeaderDrawer-professional-tape"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      Tape Hair Extensions
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-tape"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        BACK
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['tape-in-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-professional-tape-classic-tape"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Tape In Hair Extensions (100g)
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['remy-royale-tape-in-extensions'] %}
+          <a
+            id="HeaderDrawer-professional-tape-remy-tape"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Remy Royale Tape Ins (50g)
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['remy-royale-invisible-tape-in-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-professional-tape-invisible-tape"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Remy Royale Invisible Tape Ins (50g)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-professional-weave">
+    <summary
+      id="HeaderDrawer-professional-weave"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      Weave Hair Extensions
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-weave"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        BACK
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['human-hair-weave-wefts-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-professional-weave-classic-weft"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Remy Royale Classic Weft (120g)
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['flat-weft-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-professional-weave-flat-track"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Remy Royale Flat Track Weft (120g)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-professional-pre-bonded">
+    <summary
+      id="HeaderDrawer-professional-pre-bonded"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      Pre Bonded Hair Extensions
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-pre-bonded"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        BACK
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['i-tip-straight-pre-bonded-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-professional-pre-bonded-i-tip"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Remy Royale I-Tips (50g)
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['flat-tip-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-professional-pre-bonded-flat-tip"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Remy Royale Flat Tips (50g)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-professional-tools-maintenance">
+    <summary
+      id="HeaderDrawer-professional-tools-maintenance"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      Professional Tools & Maintenance
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-tools-maintenance"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        BACK
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = all_products['hair-extensions-colour-ring'] %}
+          <a
+            id="HeaderDrawer-professional-tools-maintenance-colour-ring"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Colour Rings
+          </a>
+        </li>
+
+        <li>
+          {% assign object = all_products['silicone-lined-nano-rings-beads-200-pack'] %}
+          <a
+            id="HeaderDrawer-professional-tools-maintenance-nano-beads"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Nano Beads
+          </a>
+        </li>
+
+        <li>
+          {% assign object = all_products['tape-in-hair-extensions-remover'] %}
+          <a
+            id="HeaderDrawer-professional-tools-maintenance-tape-remover"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Tape Remover
+          </a>
+        </li>
+
+        <li>
+          {% assign object = all_products['spare-tape-pack-for-tape-in-extensions'] %}
+          <a
+            id="HeaderDrawer-professional-tools-maintenance-tape-tabs"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Tape Tabs
+          </a>
+        </li>
+
+        <li>
+          {% assign object = all_products['cliphair-wig-glue'] %}
+          <a
+            id="HeaderDrawer-professional-tools-maintenance-wig-glue"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Wig Glue
+          </a>
+        </li>
+
+        <li>
+          {% assign object = all_products['cliphair-glue-remover'] %}
+          <a
+            id="HeaderDrawer-professional-tools-maintenance-wig-glue-remover"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Wig Glue Remover
+          </a>
+        </li>
+
+        <li>
+          {% assign object = all_products['spare-tape-tape-remover'] %}
+          <a
+            id="HeaderDrawer-professional-tools-spare-tape-and-remover-set"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Tape Remover & Spare Tabs Set
+          </a>
+        </li>
+
+        <li>
+          {% assign object = all_products['lace-glue-glue-remover'] %}
+          <a
+            id="HeaderDrawer-professional-tools-wig-glue-and-remover-set"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Wig Glue & Remover Set
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['hair-extensions-bundle'] %}
+          <a
+            id="HeaderDrawer-professional-tools-maintenance-bundle"
+            href="{{ object.url | append:"/hair-care-accessories-bundle" }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            Maintenance Value Bundles
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  {% assign object = collections['hair-extensions-bundle'] %}
+  <a
+    id="HeaderDrawer-professional-bundle"
+    href="{{ object.url | append:"/professional-bundle" }}"
+    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+    {% if request.path == object.url %}
+      aria-current="page"
+    {% endif %}
+  >
+    Permanent Extensions Value Bundles
+  </a>
+</li>
+
+<li>
+  {% assign object = all_products['cliphair-e-gift-card'] %}
+  <a
+    id="HeaderDrawer-professional-gift-card"
+    href="{{ object.url }}"
+    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+    {% if request.path == object.url %}
+      aria-current="page"
+    {% endif %}
+  >
+    E-Gift Card
+  </a>
+</li>
+
+<li>
+  <modal-opener
+    id="HeaderDrawer-professional-trade-account"
+    class="no-js-hidden"
+    data-modal="#PopupModal-Trade-Account"
+  >
+    <button
+      id="HeaderDrawer-Popup-Trade-Account-professional"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+      type="button"
+      aria-haspopup="dialog"
+    >
+      Apply For Trade Account Here
+    </button>
+  </modal-opener>
+  <a
+    href="https://cliphairtrade.com/pages/trade-account"
+    aria-label="Goes to trade website"
+    class="menu-drawer__menu-item link link--text list-menu__item focus-inset no-js"
+  >
+    Apply For Trade Account Here
+  </a>
+</li>
